@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 export function useNavigation() {
-  const [isExpanded, setIsExpanded] = useState(true);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleNavigation = () => {
     setIsExpanded(prev => !prev);
