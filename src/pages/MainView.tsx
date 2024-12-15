@@ -32,7 +32,7 @@ export default function MainView() {
   };
 
   return (
-    <div>
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-blue-600 to-pink-100 pt-16">
       <Spline
         scene="https://prod.spline.design/lksKQBt7OJj9S0iD/scene.splinecode"
         onSplineMouseDown={handleMouseDown} // Handle click events here

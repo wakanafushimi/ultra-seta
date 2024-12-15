@@ -24,7 +24,6 @@ const MapPage = () => {
   const quakeTrigger = useMemo(() => 6 - initialPage, [initialPage]);
 
   useEffect(() => {
-    console.log(traversedPages)
     console.log(page)
     if (traversedPages === quakeTrigger) {
       setIsEarthQuaking(true);
@@ -59,16 +58,11 @@ const MapPage = () => {
   }, [page, isEarthQuaking, traversedPages]);
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-br from-green-50 to-emerald-50 p-8">
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-gray-900 to-yellow-50 pt-16">
      
         {renderPage}
       
       <div className="text-center mt-4">
-        {isEarthQuaking ? (
-          <p className="text-red-500">⚠️ Earthquake in progress! ⚠️</p>
-        ) : (
-          <p className="text-green-500">Safe journey ahead 🌟</p>
-        )}
       </div>
     </div>
   );

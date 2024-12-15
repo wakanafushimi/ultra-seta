@@ -3,9 +3,9 @@ import { Navigation } from './Navigation';
 
 export function Layout() {
   return (
-    <div className="min-h-screen bg-gray-50 flex">
+    <div className="min-h-screen flex">
       <Navigation />
-      <main className="flex-1 ml-16 transition-all duration-300">
+      <main className="flex-1 transition-all duration-300">
        
           <Outlet />
        

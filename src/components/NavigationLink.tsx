@@ -17,17 +17,15 @@ export function NavigationLink({ to, icon: Icon, label, isExpanded }: Navigation
       to={to}
       className={`
         flex items-center px-4 py-3 rounded-lg transition-all duration-200
-        ${isActive 
-          ? 'bg-blue-100 text-blue-700' 
-          : 'text-gray-700 hover:bg-gray-100'
+        ${isActive
+          ? 'border border-white-400 text-white-800' // 活动状态：浅灰色边框，文字深灰色
+          : 'text-gray-500 hover:bg-gray-700 border border-transparent'
         }
-        ${isExpanded ? 'w-full' : 'w-12 justify-center'}
+        'w-full'
       `}
     >
-      <Icon size={20} />
-      {isExpanded && (
-        <span className="ml-3 transition-opacity duration-200">{label}</span>
-      )}
+      <Icon className="text-gray-300"size={20} />
+        <span className="ml-3 transition-opacity duration-200 text-gray-300">{label}</span>
     </Link>
   );
 }
